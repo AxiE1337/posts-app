@@ -1,16 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-
-export interface Post {
-  userId: number
-  id: number
-  title: string
-  body: string
-}
+import type { IPost } from '../../types'
 
 interface InitialState {
   loading: boolean
-  posts: Post[]
+  posts: IPost[]
 }
 
 const initialState: InitialState = {
@@ -25,7 +19,7 @@ export const counterSlice = createSlice({
     setLoading: (state, action: PayloadAction<boolean>) => {
       state.loading = action.payload
     },
-    setPosts: (state, action: PayloadAction<Post[]>) => {
+    setPosts: (state, action: PayloadAction<IPost[]>) => {
       if (Array.isArray(action.payload)) {
         state.posts = action.payload
       }
