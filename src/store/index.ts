@@ -3,6 +3,7 @@ import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux'
 import createSagaMiddleware from 'redux-saga'
 import rootSaga from './sagas'
 import postsSlice from './slices/postsSlice'
+import userSlice from './slices/userSlice'
 
 const sagaMiddleware = createSagaMiddleware()
 const middleware = [sagaMiddleware]
@@ -10,6 +11,7 @@ const middleware = [sagaMiddleware]
 export const store = configureStore({
   reducer: {
     posts: postsSlice,
+    user: userSlice,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(middleware),
