@@ -8,7 +8,7 @@ function Posts() {
   const dispatch = useAppDispatch()
 
   useEffect(() => {
-    dispatch({ type: 'FETCH_DATA' })
+    dispatch({ type: 'FETCH_POSTS' })
   }, [])
 
   if (loading) {
@@ -23,6 +23,7 @@ function Posts() {
           title={post.title}
           body={post.body}
           postId={post.id}
+          userId={post.userId}
         />
       ))}
     </main>

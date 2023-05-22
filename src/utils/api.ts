@@ -15,6 +15,12 @@ export const fetchPosts = async () => {
   return data
 }
 
+export const fetchUserPosts = async (uId: number) => {
+  await wait()
+  const { data } = await axios(baseUrl + `/posts?userId=${uId}`)
+  return data
+}
+
 export const fetchComments = async (postId: number) => {
   await wait()
   const { data } = await axios(baseUrl + `/comments?postId=${postId}`)

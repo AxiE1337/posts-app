@@ -27,7 +27,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           <Route element={<Layout />}>
             <Route path='/' element={<Posts />} />
             <Route path='/aboutme' element={<AboutMe />} />
-            <Route path='/user' element={<User />} />
+            <Route path='/user/:uId' element={<User />} />
           </Route>
         </Routes>
       </BrowserRouter>
