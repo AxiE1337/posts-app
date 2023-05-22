@@ -1,11 +1,10 @@
 import { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { RootState } from '../store'
+import { useAppDispatch, useAppSelector } from '../store'
 import Post from '../components/Post'
 
 function App() {
-  const { posts, loading } = useSelector((state: RootState) => state.posts)
-  const dispatch = useDispatch()
+  const { posts, loading } = useAppSelector((state) => state.posts)
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
     dispatch({ type: 'FETCH_DATA' })
