@@ -1,9 +1,9 @@
 import { useEffect } from 'react'
-import { useAppDispatch, useAppSelector } from '../store'
-import Post from '../components/Post'
-import LoadingScreen from '../components/LoadingScreen'
+import { useAppDispatch, useAppSelector } from '../../store'
+import Post from '../../components/Post'
+import LoadingScreen from '../../components/LoadingScreen'
 
-function App() {
+function Posts() {
   const { posts, loading } = useAppSelector((state) => state.posts)
   const dispatch = useAppDispatch()
 
@@ -29,4 +29,4 @@ function App() {
   )
 }
 
-export default App
+export default Posts
