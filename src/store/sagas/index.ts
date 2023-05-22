@@ -14,7 +14,7 @@ function* workerFetchComments({
 }): Generator<any, any, unknown> {
   yield put({ type: 'comments/setLoading', payload: true })
   const data = yield call(fetchComments, postId)
-  yield put({ type: 'comments/setcomments', payload: data })
+  yield put({ type: 'comments/setComments', payload: data })
 }
 
 export default function* rootSaga() {

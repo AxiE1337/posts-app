@@ -7,8 +7,7 @@ function App() {
   const { posts, loading } = useSelector((state: RootState) => state.posts)
   const dispatch = useDispatch()
   return (
-    <>
-      <h1>hello</h1>
+    <main>
       <Button onClick={() => dispatch({ type: 'FETCH_DATA' })}>click</Button>
       {posts?.map((post) => (
         <Post
@@ -19,7 +18,7 @@ function App() {
         />
       ))}
       {loading && <h1>loading...</h1>}
-    </>
+    </main>
   )
 }
 

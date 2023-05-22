@@ -34,6 +34,6 @@ export const counterSlice = createSlice({
   },
 })
 
-export const { setPosts } = counterSlice.actions
+export const {} = counterSlice.actions
 
 export default counterSlice.reducer
