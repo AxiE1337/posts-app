@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../../store'
 import Post from '../../components/Post'
 import LoadingScreen from '../../components/LoadingScreen'
+import styles from './styles.module.scss'
 
 function User() {
   const navigate = useNavigate()
@@ -20,12 +21,14 @@ function User() {
   }
 
   return (
-    <main>
-      <Button onClick={() => navigate('/')}>back</Button>
-      <section>
-        <h2>{user?.name}</h2>
-        <h2>{user?.email}</h2>
-        <h2>{user?.phone}</h2>
+    <main className={styles.main}>
+      <Button className={styles.btnBack} onClick={() => navigate('/')}>
+        back
+      </Button>
+      <section className={styles.section}>
+        <h2>Name: {user?.name}</h2>
+        <h2>Email: {user?.email}</h2>
+        <h2>Phone: {user?.phone}</h2>
       </section>
 
       {posts?.map((post) => (

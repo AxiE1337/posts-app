@@ -2,6 +2,7 @@ import { memo, useState } from 'react'
 import { Button } from 'react-bootstrap'
 import { fetchComments } from '../utils/api'
 import type { IComment } from '../types'
+import styles from './index.module.scss'
 
 function Comment({ postId }: { postId: number }) {
   const [loading, setLoading] = useState<boolean>(false)
@@ -25,7 +26,7 @@ function Comment({ postId }: { postId: number }) {
 
   if (close) {
     return (
-      <div>
+      <div className={styles.comment}>
         <Button disabled={loading} onClick={handleFetchComments}>
           {loading && 'Loading '}Comments
         </Button>
@@ -34,12 +35,12 @@ function Comment({ postId }: { postId: number }) {
   }
 
   return (
-    <div>
+    <div className={styles.comment}>
       <Button onClick={() => setClose(true)}>close comments</Button>
       {comments
         ?.filter((i) => i.postId === postId)
         .map((comment) => (
-          <section key={comment.id}>
+          <section key={comment.id} className={styles.commentSection}>
             <h5>{comment.email}</h5>
             <p>{comment.body}</p>
           </section>

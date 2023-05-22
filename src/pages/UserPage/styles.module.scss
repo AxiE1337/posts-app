@@ -1,0 +1,10 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .btnBack {
+    margin: 0 auto 0 5%;
+  }
+}

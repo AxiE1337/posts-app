@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '../../store'
+import styles from './style.module.scss'
 import Post from '../../components/Post'
 import LoadingScreen from '../../components/LoadingScreen'
 
@@ -16,7 +17,7 @@ function Posts() {
   }
 
   return (
-    <main>
+    <main className={styles.main}>
       {posts?.map((post) => (
         <Post
           key={post.id}

@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
 import styles from './index.module.scss'
-import avatar from '../assets/react.svg'
 
 function Menu({ open, setClose }: IMenu) {
   const handleOpen = () => {
@@ -19,8 +18,14 @@ function Menu({ open, setClose }: IMenu) {
       </Button>
       {open && (
         <section className={styles.menuContent}>
-          <img src={avatar} alt='avatar' />
-          <h3>Alex</h3>
+          <div className={styles.user}>
+            <img
+              src='https://free.clipartof.com/855-Free-Clipart-Of-A-Male-Avatar.jpg'
+              alt='avatar'
+              className={styles.userAvatar}
+            />
+            <h3>Alex</h3>
+          </div>
           <h3>example@gmail.com</h3>
           <Link to='/'>Posts</Link>
           <Link to='aboutme'>About me</Link>

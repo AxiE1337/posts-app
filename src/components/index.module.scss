@@ -19,8 +19,42 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #e0e0e0;
+    background-color: #fff;
+    box-shadow: 6px 10px 34px 2px rgba(0, 0, 0, 0.4);
     border-radius: 0.5rem;
     padding: 0.5rem;
+    .user {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      .userAvatar {
+        height: 100px;
+      }
+    }
+  }
+}
+
+.post {
+  width: 90%;
+  margin: 1rem 0;
+  padding: 1.5rem;
+  box-shadow: 6px 10px 34px 2px rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+  .postAvatar {
+    height: 150px;
+    cursor: pointer;
+  }
+}
+
+.comment {
+  padding: 0.5rem;
+  .commentSection {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
   }
 }
