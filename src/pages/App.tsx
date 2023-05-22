@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '../store'
 import Post from '../components/Post'
+import LoadingScreen from '../components/LoadingScreen'
 
 function App() {
   const { posts, loading } = useAppSelector((state) => state.posts)
@@ -9,6 +10,10 @@ function App() {
   useEffect(() => {
     dispatch({ type: 'FETCH_DATA' })
   }, [])
+
+  if (loading) {
+    return <LoadingScreen />
+  }
 
   return (
     <main>
@@ -20,7 +25,6 @@ function App() {
           postId={post.id}
         />
       ))}
-      {loading && <h1>loading...</h1>}
     </main>
   )
 }
