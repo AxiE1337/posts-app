@@ -4,3 +4,23 @@
   align-items: center;
   justify-content: center;
 }
+
+.header {
+  display: flex;
+}
+.menu {
+  position: relative;
+  margin-left: auto;
+  .menuContent {
+    position: absolute;
+    right: 0;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+}
