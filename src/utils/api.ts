@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 const baseUrl = 'https://jsonplaceholder.typicode.com'
 
 const wait = (value: number = 1000) =>
@@ -9,18 +11,12 @@ const wait = (value: number = 1000) =>
 
 export const fetchPosts = async () => {
   await wait()
-  const res = await fetch(baseUrl + '/posts')
-  return await res.json()
+  const { data } = await axios(baseUrl + '/posts')
+  return data
 }
 
 export const fetchComments = async (postId: number) => {
-  const wait = (value: number = 1000) =>
-    new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(value)
-      }, value)
-    })
   await wait()
-  const res = await fetch(baseUrl + `/comments?postId=${postId}`)
-  return await res.json()
+  const { data } = await axios(baseUrl + `/comments?postId=${postId}`)
+  return data
 }

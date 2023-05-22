@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import avatar from '../assets/react.svg'
 import Comment from './Comment'
 
@@ -12,7 +13,7 @@ function Post({ title, body, postId }: IPost) {
   )
 }
 
-export default Post
+export default memo(Post)
 
 interface IPost {
   title: string

@@ -1,14 +1,18 @@
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../store'
-import { Button } from 'react-bootstrap'
 import Post from '../components/Post'
 
 function App() {
   const { posts, loading } = useSelector((state: RootState) => state.posts)
   const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch({ type: 'FETCH_DATA' })
+  }, [])
+
   return (
     <main>
-      <Button onClick={() => dispatch({ type: 'FETCH_DATA' })}>click</Button>
       {posts?.map((post) => (
         <Post
           key={post.id}
