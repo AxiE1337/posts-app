@@ -12,7 +12,12 @@ function Menu({ open, setClose }: IMenu) {
 
   return (
     <div className={styles.menu}>
-      <Button onClick={handleOpen} variant='light' size='sm'>
+      <Button
+        className={styles.burgerButton}
+        onClick={handleOpen}
+        variant='light'
+        size='sm'
+      >
         <svg viewBox='0 0 100 80' width='40' height='40'>
           <rect width='100' height='10'></rect>
           <rect y='30' width='100' height='10'></rect>

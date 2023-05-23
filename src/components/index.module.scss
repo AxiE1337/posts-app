@@ -13,6 +13,7 @@
   position: relative;
   margin-left: auto;
   color: $base-text-color;
+
   .menuContent {
     position: absolute;
     right: 0;
@@ -66,5 +67,30 @@
     padding: 0.5rem;
     margin-top: 0.5rem;
     border-radius: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .post {
+    padding: 1rem;
+  }
+  .comment {
+    .commentSection > h5 {
+      font-size: 1.1rem;
+      line-break: anywhere;
+    }
+  }
+  .menu {
+    .burgerButton {
+      scale: 0.6;
+    }
+    .menuContent {
+      .user {
+        gap: 1rem;
+        .userAvatar {
+          height: 40px;
+        }
+      }
+    }
   }
 }
