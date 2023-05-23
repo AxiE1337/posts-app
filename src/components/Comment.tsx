@@ -37,14 +37,12 @@ function Comment({ postId }: { postId: number }) {
   return (
     <div className={styles.comment}>
       <Button onClick={() => setClose(true)}>close comments</Button>
-      {comments
-        ?.filter((i) => i.postId === postId)
-        .map((comment) => (
-          <section key={comment.id} className={styles.commentSection}>
-            <h5>{comment.email}</h5>
-            <p>{comment.body}</p>
-          </section>
-        ))}
+      {comments.map((comment) => (
+        <section key={comment.id} className={styles.commentSection}>
+          <h5>{comment.email}</h5>
+          <p>{comment.body}</p>
+        </section>
+      ))}
     </div>
   )
 }

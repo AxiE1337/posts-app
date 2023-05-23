@@ -33,7 +33,7 @@ function User() {
 
       {posts?.map((post) => (
         <Post
-          postId={post.userId}
+          postId={post.id}
           body={post.body}
           title={post.title}
           userId={post.userId}
