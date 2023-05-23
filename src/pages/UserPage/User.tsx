@@ -38,6 +38,7 @@ function User() {
           title={post.title}
           userId={post.userId}
           key={post.id}
+          clickableAvatar={false}
         />
       ))}
     </main>
