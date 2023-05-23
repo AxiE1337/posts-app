@@ -1,7 +1,19 @@
-import React from 'react'
+import styles from './styles.module.scss'
 
 function AboutMe() {
-  return <main>AboutMe</main>
+  return (
+    <main className={styles.main}>
+      <h2 className={styles.heading}>
+        Привет! Меня зовут Алексей <br />Я начал заниматься програмированием
+        чуть более полтора года назад с html css js, за это время много чему
+        научился. Сейчас развиваюсь оттачиваю навыки на пет проектах. Помимо
+        React попробовал Vue Svelte Solid. О себе: усидчивый, ответственный,
+        хорошо развил навык самообучения, знаю английский, мотивирован
+        развиваться, изучать что то новое потому что мне это нравиться, и моя
+        цель стать лид разработчиком.
+      </h2>
+    </main>
+  )
 }
 
 export default AboutMe
