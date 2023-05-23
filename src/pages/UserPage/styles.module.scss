@@ -1,3 +1,4 @@
+@import '../../index.scss';
 .main {
   min-height: 100vh;
   display: flex;
@@ -6,5 +7,9 @@
   justify-content: center;
   .btnBack {
     margin: 0 auto 0 5%;
+  }
+  .section {
+    color: $base-text-color;
+    line-height: 1.5rem;
   }
 }

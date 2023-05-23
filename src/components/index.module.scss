@@ -1,3 +1,4 @@
+@import '../index.scss';
 .loadingScreen {
   height: 100vh;
   display: flex;
@@ -11,6 +12,7 @@
 .menu {
   position: relative;
   margin-left: auto;
+  color: $base-text-color;
   .menuContent {
     position: absolute;
     right: 0;
@@ -25,9 +27,12 @@
     padding: 0.5rem;
     .user {
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
       gap: 1.5rem;
+      h3 {
+        margin-bottom: 0;
+      }
       .userAvatar {
         height: 50px;
       }
@@ -41,6 +46,7 @@
   padding: 1.5rem;
   box-shadow: 6px 10px 34px 2px rgba(0, 0, 0, 0.4);
   border-radius: 0.5rem;
+  color: $base-text-color;
   .postAvatar {
     height: 150px;
     cursor: pointer;
@@ -52,6 +58,7 @@
 
 .comment {
   padding: 0.5rem;
+  color: $base-text-color;
   .commentSection {
     display: flex;
     flex-direction: column;
