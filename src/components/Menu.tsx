@@ -6,6 +6,9 @@ function Menu({ open, setClose }: IMenu) {
   const handleOpen = () => {
     setClose(!open)
   }
+  const handleClose = () => {
+    setClose(false)
+  }
 
   return (
     <div className={styles.menu}>
@@ -27,8 +30,12 @@ function Menu({ open, setClose }: IMenu) {
             <h3>Alex</h3>
           </div>
           <h3>example@gmail.com</h3>
-          <Link to='/'>Posts</Link>
-          <Link to='aboutme'>About me</Link>
+          <Link onClick={handleClose} to='/'>
+            Posts
+          </Link>
+          <Link onClick={handleClose} to='aboutme'>
+            About me
+          </Link>
         </section>
       )}
     </div>
